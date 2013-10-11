@@ -1,16 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Always the critic]]></title>
   <link href="http://alwaysthecritic.github.io/atom.xml" rel="self"/>
   <link href="http://alwaysthecritic.github.io/"/>
-  <updated>2013-10-11T10:42:03+01:00</updated>
+  <updated>2013-10-11T11:04:03+01:00</updated>
   <id>http://alwaysthecritic.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Sam]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Second post]]></title>
+    <link href="http://alwaysthecritic.github.io/blog/2013/10/11/second-post/"/>
+    <updated>2013-10-11T11:02:00+01:00</updated>
+    <id>http://alwaysthecritic.github.io/blog/2013/10/11/second-post</id>
+    <content type="html"><![CDATA[<p>It&rsquo;s wonderful that everything&rsquo;s driven by rake/git at the command line, and editing text files. However this wouldn&rsquo;t be much good for a non-dev to produce posts.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Experimenting with Octopress]]></title>
+    <link href="http://alwaysthecritic.github.io/blog/2013/10/11/experimenting-with-octopress/"/>
+    <updated>2013-10-11T10:52:00+01:00</updated>
+    <id>http://alwaysthecritic.github.io/blog/2013/10/11/experimenting-with-octopress</id>
+    <content type="html"><![CDATA[<p>Installed and up and running on Github in about 10 minutes. Colour me impressed.</p>
+
+<p>Now for some code:</p>
+
+<figure class='code'><figcaption><span>Outputting a list of robots, one per line</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">object</span> <span class="nc">OutputGenerator</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Given a list of Robots, generate String in the output format required, one line per Robot.</span>
+</span><span class='line'>    <span class="k">def</span> <span class="n">render</span><span class="o">(</span><span class="n">robots</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">Robot</span><span class="o">])</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">val</span> <span class="n">lines</span> <span class="k">=</span> <span class="n">robots</span><span class="o">.</span><span class="n">map</span> <span class="o">{</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">HappyRobot</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">facing</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="s">&quot;%d %d %s&quot;</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">facing</span><span class="o">)</span>
+</span><span class='line'>            <span class="k">case</span> <span class="nc">LostRobot</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">facing</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="s">&quot;%d %d %s LOST&quot;</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">facing</span><span class="o">)</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>        <span class="n">lines</span><span class="o">.</span><span class="n">mkString</span><span class="o">(</span><span class="s">&quot;\r\n&quot;</span><span class="o">)</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
 </feed>

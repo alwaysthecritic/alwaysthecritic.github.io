@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: News | Always the critic]]></title>
+  <link href="http://alwaysthecritic.github.io/blog/categories/news/atom.xml" rel="self"/>
+  <link href="http://alwaysthecritic.github.io/"/>
+  <updated>2013-10-11T11:04:03+01:00</updated>
+  <id>http://alwaysthecritic.github.io/</id>
+  <author>
+    <name><![CDATA[Sam]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Experimenting with Octopress]]></title>
+    <link href="http://alwaysthecritic.github.io/blog/2013/10/11/experimenting-with-octopress/"/>
+    <updated>2013-10-11T10:52:00+01:00</updated>
+    <id>http://alwaysthecritic.github.io/blog/2013/10/11/experimenting-with-octopress</id>
+    <content type="html"><![CDATA[<p>Installed and up and running on Github in about 10 minutes. Colour me impressed.</p>
+
+<p>Now for some code:</p>
+
+<p>``` scala Outputting a list of robots, one per line
+object OutputGenerator {</p>
+
+<pre><code>// Given a list of Robots, generate String in the output format required, one line per Robot.
+def render(robots: Seq[Robot]): String = {
+    val lines = robots.map {
+        case HappyRobot(x, y, facing) =&gt; "%d %d %s".format(x, y, facing)
+        case LostRobot(x, y, facing) =&gt; "%d %d %s LOST".format(x, y, facing)
+    }
+    lines.mkString("\r\n")
+}
+</code></pre>
+
+<p>}
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
