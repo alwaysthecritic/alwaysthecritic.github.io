@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://alwaysthecritic.github.io/sitemap.xml 
